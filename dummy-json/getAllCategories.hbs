@@ -1,0 +1,16 @@
+[
+    {{#repeat 5}}
+    {
+        "id": "{{int 0 1000}}",
+        "name": "{{@categoryName}}",
+        "subcategories" : [
+            {{#repeat 3 5}}
+            {
+                "id": "{{int 0 1000}}",
+                "name": "{{@subcategoryName}}"
+            }
+            {{/repeat}}
+        ]
+    }
+    {{/repeat}}
+]
