@@ -1,34 +1,100 @@
-.header {
+.header1 {
     padding: 20px 0;
     background: #00009a;
-}
-.container {
-    margin: 0 auto;
-    width: 1280px;
+    .container {
+        margin: 0 auto;
+        width: 1280px;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.container h1 a {
-    font-size: 32px;
-    color: lightgray;
-    text-decoration: none;
-    &:hover {
-        color: darkgray;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .container h1 a {
+        font-size: 32px;
+        color: lightgray;
+        text-decoration: none;
+        &:hover {
+            color: darkgray;
+        }
+    }
+    .container ul a {
+        text-decoration: none;
+        color: lightgray;
+        font-size: 16px;
+        font-weight: 400;
+        &:hover {
+            color: darkgray;
+        }
+    }
+    .container ul {
+        list-style-type: none;
+        display: flex;
+        gap: 12px;
     }
 }
-.container ul a {
-    text-decoration: none;
-    color: lightgray;
-    font-size: 16px;
-    font-weight: 400;
-    &:hover {
-        color: darkgray;
+
+.header2 {
+    padding: 20px 0;
+    background: #2424ff;
+    .container {
+        margin: 0 auto;
+        width: 1280px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
     }
-}
-.container ul {
-    list-style-type: none;
-    display: flex;
-    gap: 12px;
+    .loginButton {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: lightgray;
+        font-size: 16px;
+        &:hover {
+            color: darkgray;
+            font-weight: 400;
+        }
+    }
+    .profileGroup {
+        position: relative;
+    }
+    .profileButton {
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+    .profileMenu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+        background: lightgray;
+        padding: 8px 12px;
+        border-radius: 5px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        >button {
+            background-color: lightblue;
+            border: 1px solid lightslategrey;
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 4px;
+
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition-duration: 0.4s;
+            &:hover {
+                background-color: cadetblue;
+            }
+            p {
+                font-size: 16px;
+                line-height: 16px;
+            }
+        }
+    }
 }

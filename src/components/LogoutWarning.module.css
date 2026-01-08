@@ -1,0 +1,45 @@
+.page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.warnBox {
+    padding: 25px;
+    border: 2px solid darkslategray;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+}
+
+.message {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.buttonsBlock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn {
+    border: none;
+    background-color: #676767;
+    padding: 8px 12px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+}
+.btnWarn {
+    background-color: #fba844;
+}

@@ -8,7 +8,7 @@ export default function PageLayout({children}) {
     return (
         <>
             <div className={styles.page}>
-                <Header />
+                <Header onLoginClick={() => setIsLoginOpened(true)} />
                 <div className={styles.body}> {children} </div>
                 <Footer />
             </div>
