@@ -1,7 +1,7 @@
 import styles from './LogoutWarning.module.css'
 import {ModalLayout} from ".";
 
-export function LogoutWarning({isOpen, onClose, onLogout}) {
+export default function LogoutWarning({isOpen, onClose, onLogout}) {
     return (
         <ModalLayout isOpen={isOpen}>
             <div className={styles.page}>

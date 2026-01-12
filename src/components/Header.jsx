@@ -2,7 +2,7 @@
 import styles from "./Header.module.css"
 import {useContext, useState} from "react";
 import {AppContext} from "../AppContext.jsx";
-import {LogoutWarning} from "./LogoutWarning.jsx";
+import {LogoutWarning, HeaderSearchBar} from ".";
 
 
 export default function Header({ onLoginClick}) {
@@ -39,7 +39,7 @@ export default function Header({ onLoginClick}) {
             </div>
             <div className={styles.header2}>
                 <div className={styles.container}>
-                    <div></div>
+                    <HeaderSearchBar />
                     {
                         logged ?
                         <div className={styles.profileGroup}>
