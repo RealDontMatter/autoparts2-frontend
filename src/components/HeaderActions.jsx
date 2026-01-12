@@ -1,4 +1,4 @@
-import {Login, LogoutWarning, ModalLayout} from ".";
+import {Login, LogoutWarning} from ".";
 import {useContext, useState} from "react";
 import {AppContext} from "../AppContext.jsx";
 import styles from "./HeaderActions.module.css"
@@ -50,9 +50,7 @@ export default function  HeaderActions(){
                 <button className={styles.loginButton} onClick={onLoginClick}>Log in</button>
             }
             <LogoutWarning isOpen={logoutWarningShown} onLogout={logout} onClose={closeLogoutWarning} />
-            <ModalLayout isOpen={isLoginOpened}>
-                <Login onClose={() => setIsLoginOpened(false)} />
-            </ModalLayout>
+            <Login isOpen={isLoginOpened} onClose={() => setIsLoginOpened(false)} />
         </>
     )
 }
