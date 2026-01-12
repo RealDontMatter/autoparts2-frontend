@@ -1,5 +1,6 @@
 import Footer from "./Footer";
 import Header from "./Header";
+import HeaderActions from "./HeaderActions";
 import HeaderSearchBar from "./HeaderSearchBar";
 import HomePageCard from "./HomePageCard";
 import Login from "./Login";
@@ -10,6 +11,7 @@ import PageLayout from "./PageLayout";
 export {
     Footer,
     Header,
+    HeaderActions,
     HeaderSearchBar,
     HomePageCard,
     Login,
