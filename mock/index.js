@@ -2,8 +2,9 @@ import fs from 'fs';
 import express from 'express';
 import dummyjson from 'dummy-json';
 
-const usersTemplate = fs.readFileSync('dummy-json/users.hbs', { encoding: 'utf8' });
-const categoriesTemplate = fs.readFileSync('dummy-json/getAllCategories.hbs', { encoding: 'utf8' });
+const usersTemplate = fs.readFileSync('mock/users.hbs', { encoding: 'utf8' });
+const categoriesTemplate = fs.readFileSync('mock/getAllCategories.hbs', { encoding: 'utf8' });
+const searchTemplate = fs.readFileSync('mock/search.hbs', { encoding: 'utf8' });
 
 const app = express();
 
@@ -69,6 +70,10 @@ app.get('/api/users', function(req, res) {
 app.get('/api/getAllCategories', function(req, res) {
     res.set('Content-Type', 'application/json');
     res.status(200).send(dummyjson.parse(categoriesTemplate, {helpers: myHelpers}));
+});
+app.get('/api/search', function(req, res) {
+    res.set('Content-Type', 'application/json');
+    res.status(200).send(dummyjson.parse(searchTemplate, {helpers: myHelpers}));
 });
 
 app.listen(3000);
