@@ -34,6 +34,12 @@ export default function  HeaderActions(){
             {
                 logged ?
                 <div className={styles.profileGroup}>
+                    <button className={styles.favoriteButton}>
+                        <img src="/cart.svg" alt="Cart" width={32} />
+                    </button>
+                    <button className={styles.cartButton}>
+                        <img src="/cart.svg" alt="Cart" width={32} />
+                    </button>
                     <button className={styles.profileButton} onClick={toggleProfileMenuVisibility}>
                         <img src="/profile.png" alt="Profile Image" width={32} />
                     </button>

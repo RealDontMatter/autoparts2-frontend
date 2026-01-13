@@ -11,8 +11,11 @@
 }
 .profileGroup {
     position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
-.profileButton {
+.profileButton, .cartButton, .favoriteButton {
     background: none;
     border: none;
     cursor: pointer;
