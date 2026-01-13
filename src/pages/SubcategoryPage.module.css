@@ -1,0 +1,38 @@
+.container {
+    display: flex;
+    height: 100%;
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.aside {
+    background-color: blue;
+    padding-inline: 20px;
+}
+.content {
+    background-color: red;
+    flex: 1;
+}
+
+.costFilterGroup {
+
+}
+.costFilterGroup .title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 8px;
+    font-weight: 400;
+}
+.costFilterGroup .inputs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    input {
+        width: 80px;
+        height: 30px;
+        font-size: 20px;
+        border-radius: 5px;
+        border: 2px solid brown;
+        padding-left: 4px;
+    }
+}
