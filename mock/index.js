@@ -5,6 +5,7 @@ import dummyjson from 'dummy-json';
 const usersTemplate = fs.readFileSync('mock/users.hbs', { encoding: 'utf8' });
 const categoriesTemplate = fs.readFileSync('mock/getAllCategories.hbs', { encoding: 'utf8' });
 const searchTemplate = fs.readFileSync('mock/search.hbs', { encoding: 'utf8' });
+const cartTemplate = fs.readFileSync('mock/getCartItems.hbs', { encoding: 'utf8' });
 
 const app = express();
 
@@ -74,6 +75,10 @@ app.get('/api/getAllCategories', function(req, res) {
 app.get('/api/search', function(req, res) {
     res.set('Content-Type', 'application/json');
     res.status(200).send(dummyjson.parse(searchTemplate, {helpers: myHelpers}));
+});
+app.get('/api/getCartItems', function(req, res) {
+    res.set('Content-Type', 'application/json');
+    res.status(200).send(dummyjson.parse(cartTemplate, {helpers: myHelpers}));
 });
 
 app.listen(3000);

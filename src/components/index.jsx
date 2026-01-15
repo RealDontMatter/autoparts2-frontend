@@ -1,3 +1,4 @@
+import Cart from "./Cart";
 import Footer from "./Footer";
 import Header from "./Header";
 import HeaderActions from "./HeaderActions";
@@ -9,6 +10,7 @@ import ModalLayout from "./ModalLayout";
 import PageLayout from "./PageLayout";
 
 export {
+    Cart,
     Footer,
     Header,
     HeaderActions,
