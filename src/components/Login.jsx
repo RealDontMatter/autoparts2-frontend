@@ -4,7 +4,7 @@ import {AppContext} from "../AppContext.jsx";
 import {ModalLayout} from ".";
 import {useForm} from "react-hook-form";
 
-export default function Login({isOpen, close, openRegister}) {
+export default function Login({isOpen, onClose, openRegister}) {
     const {context, setContext} = useContext(AppContext);
     const {register, handleSubmit, formState: {errors}, reset} = useForm();
 
@@ -14,7 +14,7 @@ export default function Login({isOpen, close, openRegister}) {
     function handleClose() {
         setErrorMessage(null);
         reset();
-        close();
+        onClose();
     }
 
     function handleRegister() {
@@ -27,6 +27,7 @@ export default function Login({isOpen, close, openRegister}) {
         if (isLoading) return;
         try {
             setIsLoading(true);
+            setErrorMessage(null);
             let response = await fetch("/api/auth/login", {
                 method: "POST",
                 body: JSON.stringify(data),
@@ -39,7 +40,10 @@ export default function Login({isOpen, close, openRegister}) {
                 setErrorMessage("Failed to connect with the server.")
             } else {
                 let data = await response.json();
-                if (response.status === 200) setContext({...context, token: data.token});
+                if (response.status === 200) {
+                    setContext({...context, userToken: data.token});
+                    onClose();
+                }
                 else setErrorMessage(data.message);
             }
         } catch (error) {
