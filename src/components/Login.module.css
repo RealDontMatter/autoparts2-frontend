@@ -27,8 +27,7 @@
     flex-direction: column;
     gap: 4px;
 }
-
-.group:not(:last-child) p {
+.group:not(:last-child) .title {
     font-size: 14px;
     font-weight: bold;
     color: #444;
@@ -38,23 +37,19 @@
     font-size: 16px;
     border-radius: 5px;
 }
-
-.close {
-    position: absolute;
-    right: 8px;
-    top: 8px;
-    color: #a11;
-    font-family: "Roboto Mono", monospace;
-    cursor: pointer;
-    border: none;
-    background-color: transparent;
-    font-size: 20px;
-    &:hover {
-        color: #822;
-    }
+.group:not(:last-child) .errorMsg {
+    color: red;
+    font-size: 14px;
 }
-
-button[type="submit"] {
+.errorBlock {
+    background: #f47070;
+    border: 1px solid #cc0000;
+    color: white;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 3px;
+}
+.submit {
     border: none;
     background-color: #00a600;
     transition-duration: 0.4s;
@@ -68,6 +63,30 @@ button[type="submit"] {
     }
 }
 
+.close {
+    position: absolute;
+    right: 4px;
+    top: 0;
+    color: #a11;
+    font-family: "Roboto Mono", monospace;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    transition-duration: 0.2s;
+    font-size: 30px;
+    &:hover {
+        color: #822;
+    }
+}
 
-
-
+.register {
+    color: #2424ff;
+    transition-duration: 0.2s;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 14px;
+    &:hover {
+        color: #00009a;
+    }
+}

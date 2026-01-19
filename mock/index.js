@@ -8,6 +8,7 @@ const searchTemplate = fs.readFileSync('mock/search.hbs', { encoding: 'utf8' });
 const cartTemplate = fs.readFileSync('mock/getCartItems.hbs', { encoding: 'utf8' });
 
 const app = express();
+app.use(express.json());
 
 const myHelpers = {
     categoryName() {
@@ -80,5 +81,22 @@ app.get('/api/getCartItems', function(req, res) {
     res.set('Content-Type', 'application/json');
     res.status(200).send(dummyjson.parse(cartTemplate, {helpers: myHelpers}));
 });
+
+app.post('/api/auth/login', function(req, res) {
+    res.set('Content-Type', 'application/json');
+    const {email, password} = req.body;
+    if (email === "user@user" && password === "user") {
+        res.status(200).send({
+            status: "success",
+            message: "Login successful",
+            token: "mock-jwt-token-xyz123"
+        });
+    } else {
+        res.status(401).send({
+            status: "error",
+            message: "Invalid email or password"
+        });
+    }
+})
 
 app.listen(3000);
