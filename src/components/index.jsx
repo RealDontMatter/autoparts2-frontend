@@ -1,3 +1,4 @@
+import Benefits from "./Benefits";
 import Cart from "./Cart";
 import Footer from "./Footer";
 import Header from "./Header";
@@ -10,6 +11,7 @@ import ModalLayout from "./ModalLayout";
 import PageLayout from "./PageLayout";
 
 export {
+    Benefits,
     Cart,
     Footer,
     Header,

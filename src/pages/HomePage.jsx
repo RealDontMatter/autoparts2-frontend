@@ -1,5 +1,5 @@
 import styles from "./HomePage.module.css";
-import {HomePageCard, PageLayout} from "../components";
+import {HomePageCard, PageLayout, Benefits} from "../components";
 import {useEffect, useState} from "react";
 
 export default function HomePage() {
@@ -28,6 +28,7 @@ export default function HomePage() {
 
                 </div>
             </div>
+            <Benefits />
         </PageLayout>
     )
 }
